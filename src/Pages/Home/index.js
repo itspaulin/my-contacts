@@ -20,6 +20,7 @@ export default function Home() {
   const [orderBy, setOrderBy] = useState("asc");
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
   const filteredContacts = useMemo(
     () =>
@@ -37,16 +38,8 @@ export default function Home() {
         const contactsList = await ContactsService.listContacts(orderBy);
 
         setContacts(contactsList);
-
-        throw new TypeError("Minha Mensagem");
       } catch (error) {
-        if (error instanceof TypeError) {
-          console.log("is TypeError");
-        }
-
-        if (error instanceof SyntaxError) {
-          console.log("is SyntaxError");
-        }
+        setHasError(true);
       } finally {
         setIsLoading(false);
       }
