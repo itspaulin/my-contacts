@@ -5,8 +5,6 @@ import NewContact from "./Pages/NewContact";
 import EditContact from "./Pages/EditContact";
 
 export default function Routes() {
-  console.log("Routes component renderizado");
-
   return (
     <Switch>
       <Route path="/" exact component={Home} />
