@@ -72,6 +72,17 @@ export default function Home() {
     <Container>
       <Loader isLoading={isLoading} />
 
+      <Modal
+        danger
+        title={"Tem certeza que deseja remover o contato 'Mateus Silva'?"}
+        confirmLabel="Deletar"
+        onCancel={() => alert("Cancelou")}
+        onConfirm={() => alert("Confirmou")}
+      >
+        <h1>asdoifjasdiofja</h1>
+        <h2>osdifhasiodufsh</h2>
+      </Modal>
+
       {contacts.length > 0 && (
         <InputSearchContainer>
           <input
