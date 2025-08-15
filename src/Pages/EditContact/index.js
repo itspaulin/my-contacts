@@ -1,9 +1,9 @@
-import ContactForm from "../../Components/ContactForm";
-import PageHeader from "../../Components/PageHeader";
+import ContactForm from "../../components/ContactForm";
+import PageHeader from "../../components/PageHeader";
 import { useParams, useHistory } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import ContactsService from "../../services/ContactsService";
-import Loader from "../../Components/Loader";
+import Loader from "../../components/Loader";
 import toast from "../../utils/toast";
 import useIsMounted from "../../hooks/useIsMounted";
 import useSafeAsyncAction from "../../hooks/useSafeAsyncAction";

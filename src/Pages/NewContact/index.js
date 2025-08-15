@@ -1,5 +1,5 @@
-import ContactForm from "../../Components/ContactForm";
-import PageHeader from "../../Components/PageHeader";
+import ContactForm from "../../components/ContactForm";
+import PageHeader from "../../components/PageHeader";
 import ContactsService from "../../services/ContactsService";
 import toast from "../../utils/toast";
 import { useRef } from "react";
