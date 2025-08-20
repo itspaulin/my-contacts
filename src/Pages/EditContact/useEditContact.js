@@ -1,15 +1,10 @@
-import ContactForm from "../../components/ContactForm";
-import PageHeader from "../../components/PageHeader";
 import { useParams, useHistory } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import ContactsService from "../../services/ContactsService";
-import Loader from "../../components/Loader";
 import toast from "../../utils/toast";
-import useIsMounted from "../../hooks/useIsMounted";
 import useSafeAsyncAction from "../../hooks/useSafeAsyncAction";
-import Presentantion from "./Presentation";
 
-export default function Container() {
+export default function useEditContact() {
   const [isLoading, setIsloading] = useState(true);
   const [contactName, setContactName] = useState("");
 
@@ -60,12 +55,5 @@ export default function Container() {
     }
   }
 
-  return (
-    <Presentantion
-      isLoading={isLoading}
-      contactName={contactName}
-      contactFormRef={contactFormRef}
-      onSubmit={handleSubmit}
-    />
-  );
+  return { isLoading, contactName, contactFormRef, handleSubmit };
 }
